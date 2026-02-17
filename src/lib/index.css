@@ -1,0 +1,40 @@
+@import "tailwindcss";
+/* Theme - Available: black-white, black-red, blue, charcoal, cyan, green, orange, pink, purple, red
+   Custom: copy node_modules/statue-ssg/src/lib/themes/custom-theme.template.css here, rename & import */
+@import "statue-ssg/themes/black-white.css";
+
+@source "../";
+@source "../../node_modules/statue-ssg/src/**/*.{svelte,js,ts}";
+
+:root { color-scheme: dark; }
+
+/* Font size multiplier support */
+:root {
+  --font-size-multiplier: 1;
+}
+
+html {
+  font-size: calc(100% * var(--font-size-multiplier));
+  transition: font-size 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure all text scales proportionally */
+body, button, input, textarea, select {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: calc(2em * var(--font-size-multiplier));
+}
+
+h2 {
+  font-size: calc(1.5em * var(--font-size-multiplier));
+}
+
+h3 {
+  font-size: calc(1.25em * var(--font-size-multiplier));
+}
+
+p, span, li {
+  font-size: calc(1em * var(--font-size-multiplier));
+}
