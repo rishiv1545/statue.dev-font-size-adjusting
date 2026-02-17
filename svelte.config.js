@@ -17,13 +17,13 @@ const config = {
       precompress: false,
       strict: true
     }),
-    
+
     // Custom alias defined to handle the content folder
     alias: {
       $content: path.resolve('./content'),
       $lib: path.resolve('./src/lib')
     },
-    
+
     // Static site pre-processing options
     prerender: {
       crawl: true,
@@ -36,4 +36,4 @@ const config = {
   }
 };
 
-export default config; 
+export default config;
